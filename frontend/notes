@@ -2,7 +2,7 @@ TO-DO:
 - create tables ✅ 
 - add belongs to has many etc ✅
 - seed data ✅
-- serializer?
+- serializer ✅
 - create all frontend folders
 - make index.HTML skeleton
 - add paths to skeletonHTML
