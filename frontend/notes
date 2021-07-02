@@ -3,7 +3,7 @@ TO-DO:
 - add belongs to has many etc ✅
 - seed data ✅
 - serializer ✅
-- create all frontend folders
+- create all frontend folders ✅
 - make index.HTML skeleton
 - add paths to skeletonHTML
 - add dom content loaded event listener to index.js
