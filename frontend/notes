@@ -1,6 +1,6 @@
 TO-DO:
 - create tables ✅ 
-- add belongs to has many etc
+- add belongs to has many etc ✅
 - seed data
 - serializer?
 - create all frontend folders
