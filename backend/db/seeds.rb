@@ -16,5 +16,102 @@ Product.create([
     category:
     product_image:
 },
-
+{
+    title:
+    description:
+    price:
+    category:
+    product_image:
+},
+{
+    title:
+    description:
+    price:
+    category:
+    product_image:
+},
+{
+    title:
+    description:
+    price:
+    category:
+    product_image:
+},
+{
+    title:
+    description:
+    price:
+    category:
+    product_image:
+},
+{
+    title:
+    description:
+    price:
+    category:
+    product_image:
+},
+{
+    title:
+    description:
+    price:
+    category:
+    product_image:
+},
+{
+    title:
+    description:
+    price:
+    category:
+    product_image:
+},
+{
+    title:
+    description:
+    price:
+    category:
+    product_image:
+},
+{
+    title:
+    description:
+    price:
+    category:
+    product_image:
+},
+{
+    title:
+    description:
+    price:
+    category:
+    product_image:
+},
+{
+    title:
+    description:
+    price:
+    category:
+    product_image:
+},
+{
+    title:
+    description:
+    price:
+    category:
+    product_image:
+},
+{
+    title:
+    description:
+    price:
+    category:
+    product_image:
+},
+{
+    title:
+    description:
+    price:
+    category:
+    product_image:
+}
 ])
