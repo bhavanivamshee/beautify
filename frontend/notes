@@ -4,8 +4,8 @@ TO-DO:
 - seed data ✅
 - serializer ✅
 - create all frontend folders ✅
-- make index.HTML skeleton
-- add paths to skeletonHTML
+- make index.HTML skeleton ✅
+- add paths to skeletonHTML ✅
 - add dom content loaded event listener to index.js
 - fetch products (read)
 - make products constructor
