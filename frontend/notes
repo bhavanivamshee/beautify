@@ -1,0 +1,14 @@
+TO-DO:
+- create tables
+- add belongs to has many etc
+- seed data
+- serializer?
+- create all frontend folders
+- make index.HTML skeleton
+- add paths to skeletonHTML
+- add dom content loaded event listener to index.js
+- fetch products (read)
+- make products constructor
+- add collection of products and new products to the collection
+- 
+
