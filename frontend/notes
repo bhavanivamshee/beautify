@@ -1,5 +1,5 @@
 TO-DO:
-- create tables
+- create tables ✅ 
 - add belongs to has many etc
 - seed data
 - serializer?
