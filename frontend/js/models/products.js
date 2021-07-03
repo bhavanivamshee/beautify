@@ -12,6 +12,11 @@ class Products {
 
     collectionOfProducts () {
         console.log(this)
+
+        const container = document.getElementById('container')//grabbing container in HTML
+        container.classList.add('container-div')//need to add container div for grid in css
+
+
     }//holds all products? make method with each product
         
 }//end of products class
