@@ -4,29 +4,33 @@ document.addEventListener("DOMContentLoaded", function(){  console.log("WE, ARE,
 
 //product fetch
 
-fetch(API_DATABASE_URL).then(response => response.json())
-.then(productArray => {console.log(productArray);
-renderAllProducts(productArray)
-})
+api.getProducts()
+    .then(products =>  {
+        products.forEach(product => {
+            const newProd = new Products(product)
+
+            newProd.collectionOfProducts()
+        })
+    })
 
 //render products
 
-const renderProduct =(productObj)=>{
-    const cardDiv = document.createElement("div")
-    cardDiv.classList.add("card")
-        cardDiv.setAttribute("data-id", productObj.id)
-        cardDiv.id = productObj.id
-    cardDiv.innerHTML = `
-        <h2>${productObj.title}</h2>
-        <img src=${productObj.product_image} class="product-avatar" />
-    `
-    const collectionDiv = document.querySelector("#product-collection")
-      collectionDiv.append(cardDiv)
-}
+//const renderProduct =(productObj)=>{
+    //const cardDiv = document.createElement("div")
+    //cardDiv.classList.add("card")
+        //cardDiv.setAttribute("data-id", productObj.id)
+        //cardDiv.id = productObj.id
+    //cardDiv.innerHTML = `
+        //<h2>${productObj.title}</h2>
+       // <img src=${productObj.product_image} class="product-avatar" />
+   // `
+    //const collectionDiv = document.querySelector("#product-collection")
+      //collectionDiv.append(cardDiv)
+//}
 
-const renderAllProducts =(prodArray)=> {
-    prodArray.forEach(productObj => { renderProduct(productObj)})
-}
+//const renderAllProducts =(prodArray)=> {
+    //prodArray.forEach(productObj => { renderProduct(productObj)})
+//}
 
 
-})
+})//end of DOM content
