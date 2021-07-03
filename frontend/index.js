@@ -4,12 +4,12 @@ document.addEventListener("DOMContentLoaded", function(){  console.log("WE, ARE,
 
 //product fetch
 
-api.getProducts()
+api.getProducts() 
     .then(products =>  {
         products.forEach(product => {
             const newProd = new Products(product)
 
-            newProd.collectionOfProducts()//make this in products?
+            newProd.collectionOfProducts()
         })
     })
 

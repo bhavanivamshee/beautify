@@ -10,9 +10,8 @@ class Products {
         this.productImage = product_image;
     }//products constructor
 
-    collectionofProducts () {
-        let container = document.getElementById('container')
-        container.classList.add('container-div')
-    }
-
+    collectionOfProducts () {
+        console.log(this)
+    }//holds all products? make method with each product
+        
 }//end of products class

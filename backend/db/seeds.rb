@@ -14,14 +14,14 @@ Product.create([
     description: "A buildable, full-coverage foundation with up to 16 hours of lightweight, natural, fade-resistant wear.",
     price: 49.00,
     category: "makeup",
-    product_image: "http://www.calibeaute.com/wp-content/uploads/2017/12/NARS-Natural-Radiant-Foundation-Review-.jpg"
+    product_image: "https://4.bp.blogspot.com/-fLvh7jOuGTQ/WmGEx5czCoI/AAAAAAAAYxU/lTFoMZu3VXQm4oDtdIfKpKTZa7rl0NjQACLcBGAs/s1600/NARS-Natural-Radiant-Longwear-Foundation.jpg"
 },
 {
     title: "Laneige Lip Sleeping Mask",
     description: "A leave-on lip mask that delivers intense moisture and antioxidants while you sleep with its Moisture Wrap™ Technology and Berry Mix Complex™ formula.",
     price: 22.00,
     category: "skincare",
-    product_image: "https://4.bp.blogspot.com/-fLvh7jOuGTQ/WmGEx5czCoI/AAAAAAAAYxU/lTFoMZu3VXQm4oDtdIfKpKTZa7rl0NjQACLcBGAs/s1600/NARS-Natural-Radiant-Longwear-Foundation.jpg"
+    product_image: "https://img.joomcdn.net/946bce3277592af4bc864bbbbdd917c3ab6a016f_original.jpeg"
 },
 {
     title: "Laura Mercier Caviar Stick Eye Shadow",

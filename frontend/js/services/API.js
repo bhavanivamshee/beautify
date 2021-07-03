@@ -9,4 +9,5 @@ getProducts() {
     .then(resp => resp.json())
 }//end of getProducts (gets all the products)
 
+
 } //end of API class
