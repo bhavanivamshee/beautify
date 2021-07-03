@@ -10,4 +10,9 @@ class Products {
         this.productImage = product_image;
     }//products constructor
 
+    collectionofProducts () {
+        let container = document.getElementById('container')
+        container.classList.add('container-div')
+    }
+
 }//end of products class

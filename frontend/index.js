@@ -9,7 +9,7 @@ api.getProducts()
         products.forEach(product => {
             const newProd = new Products(product)
 
-            newProd.collectionOfProducts()
+            newProd.collectionOfProducts()//make this in products?
         })
     })
 
