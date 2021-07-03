@@ -16,7 +16,10 @@ class Products {
         const container = document.getElementById('container')//grabbing container in HTML
         container.classList.add('container-div')//need to add container div for grid in css
 
+        const eachProductDiv = document.createElement('div')
+        eachProductDiv.classList.add('each-product')
 
-    }//holds all products? make method with each product
+
+    }//holds all products? Needs title, pic, and price for display, description for more info.
         
 }//end of products class
