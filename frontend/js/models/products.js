@@ -67,13 +67,13 @@ class Products {
         productName.textContent = this.title//grabbing name
 
         const prodPic = document.createElement("IMG")
-        prodPic.src = this.productImage
+        prodPic.src = this.productImage//grabbing specific product image
 
         const newUl = document.createElement('ul');
         const newLi = document.createElement('li');
         newLi.setAttribute('class', 'single-product-li')
         newLi.textContent = `$${this.price}`
-        newUl.appendChild(newLi)
+        newUl.appendChild(newLi)// adding price
 
         let closeSpan = document.createElement('span'); 
         closeSpan.setAttribute('class', 'close'); 
@@ -83,12 +83,19 @@ class Products {
             certainProductDiv.style.display = 'none';
             let allProductsDiv = document.getElementById('container'); 
             allProductsDiv.style.display = 'grid';
-        })
+        })//adding close button
+
+        const productDescription = document.createElement('p');
+        productDescription.setAttribute('class', 'description-ptag')
+        productDescription.textContent = `Description: ${this.description}`; 
+
 
         certainProductDiv.appendChild(productName);
         certainProductDiv.appendChild(prodPic);
         certainProductDiv.appendChild(newUl);
         certainProductDiv.appendChild(closeSpan);
+        certainProductDiv.appendChild(productDescription);
+        //adding everything to the certain product div
 
         document.body.appendChild(certainProductDiv)
     }//shows single product with description
