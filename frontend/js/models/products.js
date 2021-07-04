@@ -53,7 +53,10 @@ class Products {
     }//holds all products? Needs title, pic, and price for display, description for more info.
 
     singleProduct() {
-        
+
+        const certainProductDiv = document.createElement('div')
+        certainProductDiv.classList.add('certain-product')
+
     }//shows single product with description
         
 }//end of products class

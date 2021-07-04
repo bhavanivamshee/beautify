@@ -9,5 +9,9 @@ getProducts() {
     .then(resp => resp.json())
 }//end of getProducts (gets all the products)
 
+getCertainProduct(prodId) {
+    return fetch(`${this.baseUrl}/products/${prodId}`)
+    .then(resp => resp.json())
+}
 
 } //end of API class

@@ -10,7 +10,7 @@ TO-DO:
 - fetch products (read) ✅
 - display products (css) ✅
 - make products constructor ✅  
-- style description button
+- style description button ✅
 - fetch single product by id
 - make single products page
 - make add to cart button
