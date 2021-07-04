@@ -89,12 +89,17 @@ class Products {
         productDescription.setAttribute('class', 'description-ptag')
         productDescription.textContent = `Description: ${this.description}`; 
 
+        const productCategory = document.createElement('p');
+        productCategory.setAttribute('class', 'category-ptag')
+        productCategory.textContent = `Category: ${this.category}`;
+
 
         certainProductDiv.appendChild(productName);
         certainProductDiv.appendChild(prodPic);
         certainProductDiv.appendChild(newUl);
         certainProductDiv.appendChild(closeSpan);
         certainProductDiv.appendChild(productDescription);
+        certainProductDiv.appendChild(productCategory);
         //adding everything to the certain product div
 
         document.body.appendChild(certainProductDiv)
