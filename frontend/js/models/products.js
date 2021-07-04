@@ -26,8 +26,13 @@ class Products {
         productPic.setAttribute('id', this.id);
         productPic.src = this.productImage
 
+        const priceTag = document.createElement('h3')
+        priceTag.setAttribute('certain-product-id', this.id)
+        priceTag.textContent = `$${this.price}`
+
         eachProductDiv.appendChild(titleHeader)
         eachProductDiv.appendChild(productPic)
+        eachProductDiv.appendChild(priceTag)
         container.appendChild(eachProductDiv)
         return container
     }//holds all products? Needs title, pic, and price for display, description for more info.
