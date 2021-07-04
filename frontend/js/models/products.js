@@ -87,11 +87,16 @@ class Products {
 
         const productDescription = document.createElement('p');
         productDescription.setAttribute('class', 'description-ptag')
-        productDescription.textContent = `Description: ${this.description}`; 
+        productDescription.textContent = `Description: ${this.description}`; //product description
 
         const productCategory = document.createElement('p');
         productCategory.setAttribute('class', 'category-ptag')
-        productCategory.textContent = `Category: ${this.category}`;
+        productCategory.textContent = `Category: ${this.category}`; //product category
+
+        //creating the cart button element and setting it's attributes
+        const cartBtn = document.createElement("BUTTON");
+        cartBtn.classList.add('add-cart');
+        cartBtn.setAttribute('id', 'cart-button-id')
 
 
         certainProductDiv.appendChild(productName);
