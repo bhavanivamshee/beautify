@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Raleway:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;500&family=PT+Sans+Narrow&family=Raleway:wght@500&display=swap');
 
 body {
     margin: 0;
@@ -15,13 +16,13 @@ body {
 
 .each-product{
     border-style: solid;
-    border-color: pink;
+    border-color: mistyrose;
     box-shadow:  0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
     width: 200px;
     text-align: center;
     margin: 1em;
     padding: 5em; 
-    background-color: whitesmoke;
+    background-color: white;
 }
 
 .each-product img {
@@ -41,3 +42,16 @@ h1 {
 font-family: 'Raleway', sans-serif;
 font-size: 70px;
 }
+
+.btn {
+    position: 10px;
+    top: 65px;
+    background-color: mistyrose;
+    font-family: 'Raleway', sans-serif;
+}
+
+.btn.btn:hover, 
+.btn.btn:focus {
+    color: white;
+}
+

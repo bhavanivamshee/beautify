@@ -53,7 +53,7 @@ class Products {
     }//holds all products? Needs title, pic, and price for display, description for more info.
 
     singleProduct() {
-
+        
     }//shows single product with description
         
 }//end of products class
