@@ -8,8 +8,21 @@ TO-DO:
 - add paths to skeletonHTML ✅
 - add dom content loaded event listener to index.js ✅
 - fetch products (read) ✅
-- display products (css)
-- make products constructor
-- add collection of products and new products to the collection
-- 
+- display products (css) ✅
+- make products constructor ✅  
+- style description button
+- fetch single product by id
+- make single products page
+- make add to cart button
+- create cart class
+- cart constructor
+- post fetch to cart
+- update cart
+- delete cart
+
+
+
+**if time 
+figure out why the 0 isn't showing up on prices
+make plus and minus button on add to cart
 

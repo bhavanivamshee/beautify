@@ -30,15 +30,30 @@ class Products {
         priceTag.setAttribute('certain-product-id', this.id)
         priceTag.textContent = `$${this.price}`
 
+        const descriptionBtn = document.createElement("BUTTON")
+        descriptionBtn.classList.add('btn');
+        descriptionBtn.textContent = 'and what about it?'
+        descriptionBtn.addEventListener("click", function(event) {
+            event.preventDefault()
+            const prodId = this.previousElementSibling.firstChild.attributes[0].value
+            let api = new API;
+            api.getCertainProduct(prodId)
+            .then(product => {
+                const newProd = new Products(product)
+                newProd.singleProduct(product)
+            })
+        })
+
         eachProductDiv.appendChild(titleHeader)
         eachProductDiv.appendChild(productPic)
         eachProductDiv.appendChild(priceTag)
+        eachProductDiv.appendChild(descriptionBtn)
         container.appendChild(eachProductDiv)
         return container
     }//holds all products? Needs title, pic, and price for display, description for more info.
 
     singleProduct() {
-        
-    }
+
+    }//shows single product with description
         
 }//end of products class
