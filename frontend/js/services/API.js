@@ -10,6 +10,7 @@ getProducts() {
 }//end of getProducts (gets all the products)
 
 getCertainProduct(prodId) {
+    //console.log(prodId)
     return fetch(`${this.baseUrl}/products/${prodId}`)
     .then(resp => resp.json())
 }

@@ -38,7 +38,8 @@ class Products {
         moreInfoBtn.addEventListener("click", function(event) {
             event.preventDefault()
             console.log(this.previousElementSibling)
-            const prodId = this.previousElementSibling.firstChild.attributes[0].value
+            container.style.display = 'none';
+            let prodId = this.previousElementSibling.firstChild.attributes[0].value
             let api = new API;
             api.getCertainProduct(prodId)
             .then(product => {
@@ -68,9 +69,28 @@ class Products {
         const prodPic = document.createElement("IMG")
         prodPic.src = this.productImage
 
-        certainProductDiv.appendChild(productName);
-        certainProductDiv.appendChild(prodPic)
+        const newUl = document.createElement('ul');
+        const newLi = document.createElement('li');
+        newLi.setAttribute('class', 'single-product-li')
+        newLi.textContent = `$${this.price}`
+        newUl.appendChild(newLi)
 
+        let closeSpan = document.createElement('span'); 
+        closeSpan.setAttribute('class', 'close'); 
+        closeSpan.textContent = 'Close (X)';
+        closeSpan.addEventListener('click', function(event) {
+            event.preventDefault();
+            certainProductDiv.style.display = 'none';
+            let allProductsDiv = document.getElementById('container'); 
+            allProductsDiv.style.display = 'grid';
+        })
+
+        certainProductDiv.appendChild(productName);
+        certainProductDiv.appendChild(prodPic);
+        certainProductDiv.appendChild(newUl);
+        certainProductDiv.appendChild(closeSpan);
+
+        document.body.appendChild(certainProductDiv)
     }//shows single product with description
         
 }//end of products class
