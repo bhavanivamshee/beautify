@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
 body {
     margin: 0;
     margin-left: 200px;
@@ -28,4 +30,8 @@ body {
     transition: transform .5s ease;
     border-color: black;
     box-shadow:  0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+font-family: 'Raleway', sans-serif;
 }

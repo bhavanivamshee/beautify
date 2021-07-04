@@ -36,5 +36,9 @@ class Products {
         container.appendChild(eachProductDiv)
         return container
     }//holds all products? Needs title, pic, and price for display, description for more info.
+
+    singleProduct() {
+        
+    }
         
 }//end of products class
