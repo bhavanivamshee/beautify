@@ -62,6 +62,12 @@ class Products {
         const certainProductDiv = document.createElement('div')
         certainProductDiv.classList.add('certain-product')
 
+        const productName = document.createElement('h2');
+        console.log(productName)
+        productName.textContent = this.title
+
+        certainProductDiv.appendChild(productName);
+
     }//shows single product with description
         
 }//end of products class
