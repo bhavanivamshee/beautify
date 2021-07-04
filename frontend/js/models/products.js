@@ -63,10 +63,13 @@ class Products {
         certainProductDiv.classList.add('certain-product')
 
         const productName = document.createElement('h2');
-        console.log(productName)
-        productName.textContent = this.title
+        productName.textContent = this.title//grabbing name
+
+        const prodPic = document.createElement("IMG")
+        prodPic.src = this.productImage
 
         certainProductDiv.appendChild(productName);
+        certainProductDiv.appendChild(prodPic)
 
     }//shows single product with description
         
