@@ -25,16 +25,19 @@ class Products {
         productPic.setAttribute('class', 'products-images')
         productPic.setAttribute('id', this.id);
         productPic.src = this.productImage
+        
+        let ulTag = document.createElement('ul')
 
-        const priceTag = document.createElement('h3')
-        priceTag.setAttribute('certain-product-id', this.id)
-        priceTag.textContent = `$${this.price}`
+        let priceLiTag = document.createElement('li')
+        priceLiTag.setAttribute('certain-product-id', this.id)
+        priceLiTag.textContent = `$${this.price}`
 
-        const descriptionBtn = document.createElement("BUTTON")
-        descriptionBtn.classList.add('btn');
-        descriptionBtn.textContent = 'and what about it?'
-        descriptionBtn.addEventListener("click", function(event) {
+        const moreInfoBtn = document.createElement("BUTTON")
+        moreInfoBtn.classList.add('btn');
+        moreInfoBtn.textContent = 'and what about it?'
+        moreInfoBtn.addEventListener("click", function(event) {
             event.preventDefault()
+            console.log(this.previousElementSibling)
             const prodId = this.previousElementSibling.firstChild.attributes[0].value
             let api = new API;
             api.getCertainProduct(prodId)
@@ -44,10 +47,12 @@ class Products {
             })
         })
 
+        ulTag.appendChild(priceLiTag)
+
         eachProductDiv.appendChild(titleHeader)
         eachProductDiv.appendChild(productPic)
-        eachProductDiv.appendChild(priceTag)
-        eachProductDiv.appendChild(descriptionBtn)
+        eachProductDiv.appendChild(ulTag)
+        eachProductDiv.appendChild(moreInfoBtn)
         container.appendChild(eachProductDiv)
         return container
     }//holds all products? Needs title, pic, and price for display, description for more info.
