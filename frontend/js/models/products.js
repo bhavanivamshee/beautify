@@ -98,7 +98,7 @@ class Products {
         cartBtn.classList.add('add-cart');
         cartBtn.setAttribute('id', 'cart-button-id')
         cartBtn.textContent = "Add to cart"
-        let obj = this;
+        let obj = this; //whole product class
         cartBtn.addEventListener('click', function (e){
             event.preventDefault
 
