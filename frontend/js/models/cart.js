@@ -27,9 +27,10 @@ class Cart {
         else{
                 cartContents.innerHTML = "";
                 this.contents.forEach(function(product){
+                    console.log(product)
                     cartContents.innerHTML += `
                     <div class="cart-item">
-                        <img src="${product.product_image}" alt="" class="cart-img">  <span class="cart-item-name">${product.title} - $${product.price} x ${product.quantity}</span> <button class="remove-cart" id=${product.id}><i class="material-icons tiny">remove_shopping_cart</i></button> 
+                        <img src="${product.productImage}" alt="" class="cart-img">  <span class="cart-item-name">${product.title} - $${product.price} x ${product.quantity}</span> <button class="remove-cart" id=${product.id}><i class="material-icons tiny">remove_shopping_cart</i></button> 
                     </div>
                     <br>
                     `
@@ -43,6 +44,26 @@ class Cart {
 
             const removeBtns = document.querySelectorAll(".remove-cart")
             removeBtns.forEach(button => button.addEventListener("click", e => this.removeFromCart(e)))
+        }
+    }
+
+    removeFromCart(e){
+        console.log(e)
+        try{
+            const product = this.contents.find(product => product.id == e.target.parentElement.id);
+            product.quantity--;
+            this.total -= product.price
+            if (product.quantity > 0){
+                renderCart();
+            }
+            else{
+                const index = this.contents.indexOf(product);
+                this.contents.splice(index, 1);
+                renderCart();
+            }
+        }
+        catch(err){
+            
         }
     }
 

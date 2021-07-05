@@ -210,3 +210,11 @@ transition: all 0.3s ease 0s;
     margin-left: 20px;
     margin-right: 20px;
 }
+.cart-img{
+    max-height: 50px;
+    margin-right: 10px;
+}
+
+#remove-cart{
+    margin-left: 10px;
+}

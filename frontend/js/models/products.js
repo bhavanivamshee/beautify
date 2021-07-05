@@ -6,7 +6,7 @@ class Products {
         this.title = title; 
         this.description = description;
         this.price = price; 
-        this.quantity = quantity;
+        this.quantity = 0;
         this.category = category;
         this.id = id;
         this.productImage = product_image;
