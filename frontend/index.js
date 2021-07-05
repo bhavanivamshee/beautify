@@ -3,6 +3,9 @@ const api = new API;
 const cart = new Cart();
 document.addEventListener("DOMContentLoaded", function(){  console.log("WE, ARE,, LIVE🙆🏾‍♂️✨")
 
+const cartCollapse = document.querySelector(".cart");
+    cartCollapse.addEventListener("click", renderCart);
+
     //product fetch
 
     api.getProducts() 
@@ -14,13 +17,16 @@ document.addEventListener("DOMContentLoaded", function(){  console.log("WE, ARE,
         })
     })
 
+    function addToCart(e) {
+        item = Item.all.find(item => item.id == e.target.id);
+        cart.addItem(item);
+    }
 
-    const cartCollapse = document.querySelector(".cart");
-    cartCollapse.addEventListener("click", renderCart);
-
-    $(document).ready(function(){
-        $('.collapsible').collapsible();
-    });
+    
+function renderCart(){
+Cart.renderCart
+}
+    
 
 //render products
 
