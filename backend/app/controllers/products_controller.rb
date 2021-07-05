@@ -1,5 +1,4 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :update, :destroy]
 
   # GET /products
   def index
@@ -9,7 +8,8 @@ class ProductsController < ApplicationController
 
   # GET /products/1
   def show
-    render json: @product
+    product = Product.find_by(id: params[:id])
+    render json: product, except: [:created_at, :updated_at]
   end
 
   # POST /products
