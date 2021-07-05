@@ -54,12 +54,12 @@ class Cart {
             product.quantity--;
             this.total -= product.price
             if (product.quantity > 0){
-                renderCart();
+                this.renderCart();
             }
             else{
                 const index = this.contents.indexOf(product);
                 this.contents.splice(index, 1);
-                renderCart();
+                this.renderCart();
             }
         }
         catch(err){
