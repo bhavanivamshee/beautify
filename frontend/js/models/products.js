@@ -99,14 +99,12 @@ class Products {
         //creating the cart button element and setting it's attributes
         const cartBtn = document.createElement("BUTTON");
         cartBtn.classList.add('add-cart');
-        cartBtn.setAttribute('id', 'cart-button-id')
+        cartBtn.setAttribute('id', `${this.id}`)
         cartBtn.textContent = "Add to cart"
         let obj = this; //whole product class
         cartBtn.addEventListener('click', function (e){
             event.preventDefault
-
-        
-
+            cartBtn.id = this.id
         })
 
 

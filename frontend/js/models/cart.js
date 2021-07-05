@@ -1,7 +1,14 @@
 class Cart {
-    constructor({item_count, total_price, id}) {
-        this.itemCount = item_count;
-        this.totalPrice = total_price;
-        this.id = id;
+    constructor(contents = [], total = 0){
+        this.contents = contents;
+        this.total = total;
+    }
+    get total(){
+        return this.total
+    }
+
+    addToCart(item){
+        this.contents.push(item);
+        this.total += item.price;
     }
 }

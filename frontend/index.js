@@ -13,6 +13,11 @@ api.getProducts()
         })
     })
 
+    function addToCart(e){
+        product = Product.all.find(product => product.id == e.target.id)
+        cart.addProduct(product);
+    }
+
 //render products
 
 //const renderProduct =(productObj)=>{
