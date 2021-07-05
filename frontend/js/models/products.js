@@ -1,5 +1,7 @@
 class Products {
 
+    static all = [];
+
     constructor({title, description, price, quantity, category, id, product_image}) {
         this.title = title; 
         this.description = description;
@@ -8,6 +10,7 @@ class Products {
         this.category = category;
         this.id = id;
         this.productImage = product_image;
+        Products.all.push(this);
     }//products constructor
 
     collectionOfProducts () {
@@ -113,9 +116,11 @@ class Products {
         certainProductDiv.appendChild(closeSpan);
         certainProductDiv.appendChild(productDescription);
         certainProductDiv.appendChild(productCategory);
+        certainProductDiv.appendChild(cartBtn);
         //adding everything to the certain product div
 
         document.body.appendChild(certainProductDiv)
+
     }//shows single product with description
         
 }//end of products class
