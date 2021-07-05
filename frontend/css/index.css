@@ -36,9 +36,14 @@ body {
 
 .each-product img:hover {
     transform: scale(1.5);
+}
 
 .each-product h3 {
     font-family: 'Barlow', sans-serif;
+}
+
+.each-product h3:hover {
+    color: rosybrown;
 }
 
 h1 {
