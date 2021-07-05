@@ -1,10 +1,11 @@
 document.addEventListener("click", (event)=>{ console.log("💻🔬👀:: You Just Clicked on == ", event.target) }  )
 const api = new API;
+const cart = new Cart();
 document.addEventListener("DOMContentLoaded", function(){  console.log("WE, ARE,, LIVE🙆🏾‍♂️✨")
 
-//product fetch
+    //product fetch
 
-api.getProducts() 
+    api.getProducts() 
     .then(products =>  {
         products.forEach(product => {
             const newProd = new Products(product)
@@ -13,8 +14,8 @@ api.getProducts()
         })
     })
 
-    function addToCart(e){
-        product = Product.all.find(product => product.id == e.target.id)
+   function addToCart(e){
+       let product = Product.all.find(product => product.id == e.target.id)
         cart.addProduct(product);
     }
 

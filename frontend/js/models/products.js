@@ -1,5 +1,5 @@
 class Products {
-
+    cart = new Cart
     static all = [];
 
     constructor({title, description, price, quantity, category, id, product_image}) {
@@ -101,11 +101,16 @@ class Products {
         cartBtn.classList.add('add-cart');
         cartBtn.setAttribute('id', `${this.id}`)
         cartBtn.textContent = "Add to cart"
-        let obj = this; //whole product class
-        cartBtn.addEventListener('click', function (e){
-            event.preventDefault
-            cartBtn.id = this.id
+        cartBtn.addEventListener('click', function(e){
+            
+            let product = Products.all.find(product => product.id == e.target.id)
+            console.log(product)
+            cart.addProduct(product);
         })
+
+        function addToCart(e){
+             cart.addProduct(product);
+         }
 
 
         certainProductDiv.appendChild(productName);

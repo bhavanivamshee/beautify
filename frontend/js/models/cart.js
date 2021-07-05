@@ -3,12 +3,13 @@ class Cart {
         this.contents = contents;
         this.total = total;
     }
-    get total(){
-        return this.total
-    }
 
-    addToCart(item){
-        this.contents.push(item);
-        this.total += item.price;
+    addProduct(product){
+        if (!cart.contents.includes(product)){
+            this.contents.push(product);
+        }
+        this.total += product.price;
+        product.quantity++;
+        console.log(`${product.title} has been added to the cart`)
     }
 }
