@@ -4,6 +4,7 @@ class Cart {
         this.total = total;
     }
 
+
     addProduct(product){
         if (!cart.contents.includes(product)){
             this.contents.push(product);
@@ -12,4 +13,6 @@ class Cart {
         product.quantity++;
         console.log(`${product.title} has been added to the cart`)
     }
+
+    
 }

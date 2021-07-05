@@ -14,10 +14,13 @@ document.addEventListener("DOMContentLoaded", function(){  console.log("WE, ARE,
         })
     })
 
-   function addToCart(e){
-       let product = Product.all.find(product => product.id == e.target.id)
-        cart.addProduct(product);
-    }
+
+    const cartCollapse = document.querySelector(".cart");
+    cartCollapse.addEventListener("click", renderCart);
+
+    $(document).ready(function(){
+        $('.collapsible').collapsible();
+    });
 
 //render products
 
