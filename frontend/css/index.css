@@ -2,6 +2,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Raleway:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Barlow:wght@300;500&family=PT+Sans+Narrow&family=Raleway:wght@500&display=swap');
 
+h1 {
+    text-align: center;
+    font-family: 'Raleway', sans-serif;
+    font-size: 60px;
+}
+
+h1:hover {
+    color: rosybrown;
+}
+
+h1:hover {
+    /* font-size: 65px; */
+    transition-duration: 1s; 
+      transform: scale(1.35);
+}
+
 body {
     margin: 0;
     margin-left: 200px;
@@ -39,7 +55,7 @@ body {
 }
 
 .each-product h3 {
-    font-family: 'Barlow', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 .each-product h3:hover {
@@ -68,11 +84,100 @@ li {
     position: relative;
     right: 21px;
     top: 65px;
-    /* border: solid; */
+    font-family: 'Raleway', sans-serif;
 }
 
 
 ul {
     list-style-type: none;
     text-align: center;
+}
+
+.container-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; 
+    /* text-align: center; */
+    
+}
+
+.certain-product {
+    display: grid;
+   width: 550px;
+    height: 550px;
+    background-color: white;
+    box-shadow:  0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 3em;
+    padding: 5em;
+    border-radius: 30px;
+    position: relative;
+    left: 450px;
+} 
+
+.certain-product img {
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: 0 auto;
+    transition: transform .5s;
+} 
+
+.certain-product img:hover {
+    transform: scale(1.5);
+
+}
+
+.certain-product h2 {
+    position: relative;
+    bottom: 75px;
+    font-size: 25px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.single-product-li {
+    text-align: center;
+    position: relative;
+    top: 10px;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.description-ptag {
+    text-align: center;
+    position: relative;
+    bottom: 5px;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.category-ptag {
+    text-align: center;
+    position: relative;
+    bottom: 20px;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.add-cart {
+    border: none;
+background: white;
+color: rosybrown !important;
+font-weight: 100;
+padding: 10px;
+text-transform: uppercase;
+border-radius: 6px;
+display: inline-block;
+transition: all 0.3s ease 0s;
+position: relative;
+bottom: 20px;
+}
+
+.add-cart:hover {
+    color: black !important;
+font-weight: 700 !important;
+letter-spacing: 3px;
+background: whitesmoke;
+/* -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57); */
+transition: all 0.3s ease 0s;
 }
