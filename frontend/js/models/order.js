@@ -33,13 +33,14 @@ class Order {
 
             `
         
-        const orderBtn = document.querySelector("#place-order");
-        orderBtn.addEventListener("click", this.placeOrder.bind(this))
+        const form = document.querySelector("form");
+        form.addEventListener("submit", e => this.placeOrder.call(this, e))
     }
 
     async placeOrder(e){
         e.preventDefault()
-        const products = this.products.map(product => {
+        console.log(this.items)
+        const items = this.items.map(product => {
             return {id: product.id, quantity: product.quantity}
         })
         const data = {
@@ -60,17 +61,15 @@ class Order {
             body: JSON.stringify(data)
         }
         try{
+            let baseURL = "http://localhost:3000/"
             const response = await fetch(baseURL+"orders", config);
             if(response.ok){
                 const json = await response.json();
-                M.toast({html: `Your order has been successfully placed!`,classes: 'rounded'})
                 cart.clear();
                 this.renderOrder(json);
             }
         }
         catch(err){
-            console.log(err);
-            M.toast({html: `There was an error processing your order!`,classes: 'rounded'})
         }
         
     }

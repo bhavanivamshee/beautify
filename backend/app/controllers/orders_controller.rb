@@ -1,13 +1,13 @@
 class OrdersController < ApplicationController
     def create
-        products = get_products
+        items = get_products
         order = Order.create(
             name: params[:name],
             address: params[:address],
             phone: params[:phone],
             email: params[:email],
             total: params[:total],
-            products: products
+            products: items
         )
         if order.valid?
             render json: order, include: [products: {except: [:created_at, :updated_at]}] 
@@ -31,10 +31,9 @@ class OrdersController < ApplicationController
 
 
     def get_products
-        products = params[:products].map do |product|
-            i = Product.find(product[:id])
-            i.quantity = product[:quantity]
-            i
+        products = params[:items].map do |product|
+            p = Product.find(product[:id])
+            p
         end
         return products
     end
