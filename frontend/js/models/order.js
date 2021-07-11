@@ -74,4 +74,26 @@ class Order {
         
     }
 
+    renderOrder(order){
+        this.id = order.id;
+        const orderContainer = document.querySelector("#orders")
+        orderContainer.innerHTML = 
+            `   <p class=""><u>${order.name}</u></p>
+                <p class="">Email: ${order.email}</p>  
+                <p class="">Address: ${order.address}</p>    
+                <p class="">Phone: ${order.phone}</p>     
+            `
+        for(const item of order.items){
+            orderContainer.innerHTML += `
+                ${item.name} x ${item.quantity}
+            `
+        }
+        orderContainer.innerHTML += `
+            <p class=""><b>Total: ${order.total}</b></p>
+            <button class="btn" id="cancel-order">Cancel Order</button>
+        `
+        const cancelOrderBtn = document.querySelector("#cancel-order")
+        cancelOrderBtn.addEventListener("click", this.cancelOrder.bind(this))
+    }
+
 }//orderclassend

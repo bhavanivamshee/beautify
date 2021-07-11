@@ -11,14 +11,14 @@ TO-DO:
 - display products (css) ✅
 - make products constructor ✅  
 - style description button ✅
-- fetch single product by id
-- make single products page
-- make add to cart button
-- create cart class
-- cart constructor
-- post fetch to cart
-- update cart
-- delete cart
+- fetch single product by id ✅
+- make single products page ✅
+- make add to cart button ✅
+- products and quantities rendering to side of page ✅
+- can delete cart items ✅
+- can render order form ✅
+- need to be able to see order form contents
+- need to be able to delete order
 
 
 
