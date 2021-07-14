@@ -63,6 +63,7 @@ class Order {
 
             let baseURL = "http://localhost:3000/"
             const response = await fetch(baseURL+"orders", config);
+            console.log(response)
             if(response){
                 const json = await response.json();
                 cart.clear();
@@ -82,21 +83,36 @@ class Order {
             `   <p class=""><u>${order.name}</u></p>
                 <p class="">Email: ${order.email}</p>  
                 <p class="">Address: ${order.address}</p>    
-                <p class="">Phone: ${order.phone}</p>
-                <p class="">Total: $${order.total}</p>    
+                <p class="">Phone: ${order.phone}</p>   
             `
-        for(const item of order){
-            orderContainer.innerHTML += `
-                ${item.name} x ${item.quantity}
-            `
-        }
         orderContainer.innerHTML += `
-            <p class=""><b>Total: ${order.total}</b></p>
+            <p class=""><b>Total: $${order.total}</b></p>
             <button class="btn" id="cancel-order">Cancel Order</button>
         `
         const cancelOrderBtn = document.querySelector("#cancel-order")
         cancelOrderBtn.addEventListener("click", this.cancelOrder.bind(this))
     }
+
+    async cancelOrder(){
+        const config = {
+            method: "DELETE",
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            }
+        }
+        
+            let baseURL = "http://localhost:3000/"
+            const response = await fetch(baseURL+`orders/${this.id}`, config);
+            if(response.ok){
+                $(".orders-container").hide();
+            }
+            else{
+                console.log(response)
+            }
+    
+    }
+    
 
     
 }//orderclassend
