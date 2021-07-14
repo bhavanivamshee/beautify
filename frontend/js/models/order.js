@@ -51,7 +51,7 @@ class Order {
             items: items,
             total: this.total,
         }
-      
+        
         const config = {
             method: "POST",
             headers: {
@@ -60,30 +60,32 @@ class Order {
             },
             body: JSON.stringify(data)
         }
-        try{
+
             let baseURL = "http://localhost:3000/"
             const response = await fetch(baseURL+"orders", config);
-            if(response.ok){
+            if(response){
                 const json = await response.json();
                 cart.clear();
                 this.renderOrder(json);
             }
-        }
-        catch(err){
-        }
+        
         
     }
 
     renderOrder(order){
+
+        console.log(order)
         this.id = order.id;
-        const orderContainer = document.querySelector("#orders")
+        //$(".orders-container").show();
+        const orderContainer = document.getElementById('orders')
         orderContainer.innerHTML = 
             `   <p class=""><u>${order.name}</u></p>
                 <p class="">Email: ${order.email}</p>  
                 <p class="">Address: ${order.address}</p>    
-                <p class="">Phone: ${order.phone}</p>     
+                <p class="">Phone: ${order.phone}</p>
+                <p class="">Total: $${order.total}</p>    
             `
-        for(const item of order.items){
+        for(const item of order){
             orderContainer.innerHTML += `
                 ${item.name} x ${item.quantity}
             `
@@ -96,4 +98,5 @@ class Order {
         cancelOrderBtn.addEventListener("click", this.cancelOrder.bind(this))
     }
 
+    
 }//orderclassend

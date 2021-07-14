@@ -74,6 +74,6 @@ class Cart {
 
     clear(){
         this.contents = [];
-        renderCart();
+        this.renderCart();
     }
 }

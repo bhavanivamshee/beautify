@@ -219,3 +219,17 @@ transition: all 0.3s ease 0s;
     margin-left: 10px;
 }
 
+.orders-container{
+    max-width: 500px;
+    background-color: mistyrose;
+    color: rosybrown;
+    margin-top: 30px;
+    padding: 10px;
+    padding-bottom: 25px;
+    border: solid 1px;
+    border-radius: 15px;
+}
+.order-container h3{
+    font-family: 'Handlee', cursive;
+    margin-bottom: 5px;
+}

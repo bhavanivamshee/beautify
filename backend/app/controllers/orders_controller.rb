@@ -6,9 +6,11 @@ class OrdersController < ApplicationController
             address: params[:address],
             phone: params[:phone],
             email: params[:email],
-            total: params[:total],
-            products: items
+            total: params[:total]
         )
+        items.each do |item|
+            order.products << item
+        end
         if order.valid?
             render json: order, include: [products: {except: [:created_at, :updated_at]}] 
         else
