@@ -7,7 +7,7 @@ constructor () {
 getProducts() {
     return fetch(`${this.baseUrl}/products`) 
     .then(resp => resp.json())
-}//end of getProducts (gets all the products)
+}//end of getProducts 
 
 getCertainProduct(prodId) {
     //console.log(prodId)

@@ -15,8 +15,8 @@ class Products {
 
     collectionOfProducts () {
 
-        const container = document.getElementById('container')//grabbing container in HTML
-        container.classList.add('container-div')//need to add container div for grid in css
+        const container = document.getElementById('container')
+        container.classList.add('container-div')
 
         const eachProductDiv = document.createElement('div')
         eachProductDiv.classList.add('each-product')
@@ -59,7 +59,7 @@ class Products {
         eachProductDiv.appendChild(moreInfoBtn)
         container.appendChild(eachProductDiv)
         return container
-    }//holds all products? Needs title, pic, and price for display, description for more info.
+    }
 
     singleProduct() {
 

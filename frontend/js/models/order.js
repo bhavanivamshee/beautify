@@ -41,7 +41,7 @@ class Order {
         e.preventDefault()
         console.log(this.items)
         const items = this.items.map(product => {
-            return {id: product.id, quantity: product.quantity}
+            return {id: product.id, quantity: product.quantity, name: product.title}
         })
         const data = {
             name: $("#name").val(),
@@ -60,10 +60,8 @@ class Order {
             },
             body: JSON.stringify(data)
         }
-
             let baseURL = "http://localhost:3000/"
             const response = await fetch(baseURL+"orders", config);
-            console.log(response)
             if(response){
                 const json = await response.json();
                 cart.clear();
@@ -85,6 +83,16 @@ class Order {
                 <p class="">Address: ${order.address}</p>    
                 <p class="">Phone: ${order.phone}</p>   
             `
+            const orderItems = this.items.map(product => {
+                return {id: product.id, quantity: product.quantity, name: product.title}
+            })
+
+            for(const item of orderItems){
+                orderContainer.innerHTML += `
+                    ${item.name} x ${item.quantity}
+                `
+            }
+
         orderContainer.innerHTML += `
             <p class=""><b>Total: $${order.total}</b></p>
             <button class="btn" id="cancel-order">Cancel Order</button>
@@ -106,6 +114,7 @@ class Order {
             const response = await fetch(baseURL+`orders/${this.id}`, config);
             if(response.ok){
                 $(".orders-container").hide();
+                Cart.renderCart;
             }
             else{
                 console.log(response)

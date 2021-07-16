@@ -12,7 +12,7 @@ class OrdersController < ApplicationController
             order.products << item
         end
         if order.valid?
-            render json: order, include: [products: {except: [:created_at, :updated_at]}] 
+            render json: order, include: [items: {except: [:created_at, :updated_at]}]
         else
             render json: order.errors.full_messages, status: :unprocessable_entity
         end
